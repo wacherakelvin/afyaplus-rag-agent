@@ -1,0 +1,8 @@
+langchain>=1.0
+langchain-core>=1.0
+langchain-openai>=1.0
+langgraph>=1.0
+llama-index-core>=0.12
+llama-index-embeddings-openai>=0.3
+python-dotenv>=1.0
+pytest>=8.0
