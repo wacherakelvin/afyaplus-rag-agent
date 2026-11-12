@@ -12,7 +12,7 @@ Model: `gpt-4o-mini` | Embeddings: `text-embedding-3-small` | Chunks: see storag
 **Tools called:** search_knowledge_vault  
 **Sources retrieved:** [source: afyaplus_cover_plans.md#bfdec5ff], [source: afyaplus_cover_plans.md#cf941b87], [source: claims_and_preauthorisation.md#21ea2e80], [source: claims_and_preauthorisation.md#9fc659cd]  
 **Invalid citations removed:** none  
-**History tokens:** 775 | **Latency:** 6035 ms
+**History tokens:** 775 | **Latency:** 4824 ms
 
 **Model output (still masked):**
 
@@ -34,7 +34,7 @@ Yes, as a Silver plan member, you need pre-authorisation before undergoing an MR
 **Tools called:** search_knowledge_vault, calculate_claim_payout  
 **Sources retrieved:** [source: afyaplus_cover_plans.md#320320c2], [source: afyaplus_cover_plans.md#40688382], [source: afyaplus_cover_plans.md#bfdec5ff], [source: afyaplus_cover_plans.md#cf941b87]  
 **Invalid citations removed:** none  
-**History tokens:** 1766 | **Latency:** 6182 ms
+**History tokens:** 1766 | **Latency:** 5833 ms
 
 **Model output (still masked):**
 
@@ -68,7 +68,7 @@ Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: afyaplus
 **Tools called:** calculate_medication_volume  
 **Sources retrieved:** none  
 **Invalid citations removed:** none  
-**History tokens:** 1967 | **Latency:** 3552 ms
+**History tokens:** 1967 | **Latency:** 3205 ms
 
 **Model output (still masked):**
 
@@ -87,24 +87,20 @@ The volume for one dose of the prescribed medication is **12 mL**. The maximum s
 **Sent to model (masked):** Who is the CEO of AfyaPlus?
 
 **PII masked:** none  
-**Tools called:** search_knowledge_vault  
-**Sources retrieved:** [source: afyaplus_cover_plans.md#320320c2], [source: claims_and_preauthorisation.md#21ea2e80], [source: data_protection_policy.md#84a74367], [source: data_protection_policy.md#acbc1f5a]  
+**Tools called:** none  
+**Sources retrieved:** none  
 **Invalid citations removed:** none  
-**History tokens:** 3043 | **Latency:** 2799 ms
+**History tokens:** 2007 | **Latency:** 1373 ms
 
 **Model output (still masked):**
 
 ```
-The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for information regarding the CEO.
-
-Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: claims_and_preauthorisation.md#21ea2e80], [source: data_protection_policy.md#84a74367], [source: data_protection_policy.md#acbc1f5a]
+The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for such inquiries.
 ```
 
 **Final answer shown to user (de-masked):**
 
-The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for information regarding the CEO.
-
-Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: claims_and_preauthorisation.md#21ea2e80], [source: data_protection_policy.md#84a74367], [source: data_protection_policy.md#acbc1f5a]
+The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for such inquiries.
 
 ## Turn 5
 
@@ -116,14 +112,20 @@ Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: claims_a
 **Tools called:** none  
 **Sources retrieved:** none  
 **Invalid citations removed:** none  
-**History tokens:** 2304 | **Latency:** 1067 ms
+**History tokens:** 2052 | **Latency:** 1223 ms
 
 **Model output (still masked):**
 
 ```
-You provided the placeholders [PHONE_1] and [EMAIL_1].
+You provided the following contact information:
+
+- Phone number: [PHONE_1]
+- Email: [EMAIL_1]
 ```
 
 **Final answer shown to user (de-masked):**
 
-You provided the placeholders 0712 345 678 and wanjiku.m@example.co.ke.
+You provided the following contact information:
+
+- Phone number: 0712 345 678
+- Email: wanjiku.m@example.co.ke
