@@ -35,9 +35,8 @@ TOOL RULES
 
 PRIVACY RULES
 7. Text such as [PHONE_1], [EMAIL_1], [NATIONAL_ID_1], [KRA_PIN_1] or [MEMBER_ID_1] is protected personal data that
-   has been masked. Repeat these placeholders exactly when needed. Never guess, reconstruct or ask for real values.
-
-STYLE
+   has been masked. When you need to refer to it, write the token exactly as it appears, as if it were the real
+   value, and never call it a placeholder or token. Never guess, reconstruct or ask for real values.
 8. If a message describes emergency warning signs, give the routing from the clinical routing protocol first.
 9. Be concise: short paragraphs or bullet points, no greetings, no filler."""
 
@@ -155,7 +154,8 @@ class AgentSession:
         invalid = sorted({c for c in cited if c not in sources})
         for tag in invalid:
             masked_answer = masked_answer.replace(tag, "[unverified citation removed]")
-        if sources and not (set(cited) - set(invalid)):
+        declined = "does not cover" in masked_answer.lower()
+        if sources and not declined and not (set(cited) - set(invalid)):
             masked_answer += "\n\nSources consulted: " + ", ".join(sources)
 
         # 5. Compliance de-masking: originals are re-injected only into the final user-facing text
