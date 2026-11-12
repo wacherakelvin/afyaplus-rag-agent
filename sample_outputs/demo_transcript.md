@@ -12,17 +12,17 @@ Model: `gpt-4o-mini` | Embeddings: `text-embedding-3-small` | Chunks: see storag
 **Tools called:** search_knowledge_vault  
 **Sources retrieved:** [source: afyaplus_cover_plans.md#bfdec5ff], [source: afyaplus_cover_plans.md#cf941b87], [source: claims_and_preauthorisation.md#21ea2e80], [source: claims_and_preauthorisation.md#9fc659cd]  
 **Invalid citations removed:** none  
-**History tokens:** 785 | **Latency:** 7223 ms
+**History tokens:** 775 | **Latency:** 4824 ms
 
 **Model output (still masked):**
 
 ```
-Yes, as a Silver plan member, you need pre-authorisation before undergoing an MRI scan. Pre-authorisation is required for all planned MRI and CT scans across all plans. If you proceed without it, AfyaPlus may decline the claim or only partially pay it [source: claims_and_preauthorisation.md#21ea2e80].
+Yes, as a Silver plan member, you need pre-authorisation before undergoing an MRI scan. Pre-authorisation is required for all planned MRI and CT scans across all plans. Emergency treatment does not require pre-authorisation [source: claims_and_preauthorisation.md#21ea2e80].
 ```
 
 **Final answer shown to user (de-masked):**
 
-Yes, as a Silver plan member, you need pre-authorisation before undergoing an MRI scan. Pre-authorisation is required for all planned MRI and CT scans across all plans. If you proceed without it, AfyaPlus may decline the claim or only partially pay it [source: claims_and_preauthorisation.md#21ea2e80].
+Yes, as a Silver plan member, you need pre-authorisation before undergoing an MRI scan. Pre-authorisation is required for all planned MRI and CT scans across all plans. Emergency treatment does not require pre-authorisation [source: claims_and_preauthorisation.md#21ea2e80].
 
 ## Turn 2
 
@@ -34,16 +34,16 @@ Yes, as a Silver plan member, you need pre-authorisation before undergoing an MR
 **Tools called:** search_knowledge_vault, calculate_claim_payout  
 **Sources retrieved:** [source: afyaplus_cover_plans.md#320320c2], [source: afyaplus_cover_plans.md#40688382], [source: afyaplus_cover_plans.md#bfdec5ff], [source: afyaplus_cover_plans.md#cf941b87]  
 **Invalid citations removed:** none  
-**History tokens:** 1773 | **Latency:** 5804 ms
+**History tokens:** 1766 | **Latency:** 5833 ms
 
 **Model output (still masked):**
 
 ```
 For your MRI bill of KES 48,000:
 
-- AfyaPlus will pay: KES 38,400
-- You will pay: KES 9,600
-- Remaining outpatient limit after this claim: KES 21,600
+- **AfyaPlus will pay:** KES 38,400
+- **You will pay:** KES 9,600
+- **Remaining outpatient limit after this claim:** KES 21,600
 
 Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: afyaplus_cover_plans.md#40688382], [source: afyaplus_cover_plans.md#bfdec5ff], [source: afyaplus_cover_plans.md#cf941b87]
 ```
@@ -52,9 +52,9 @@ Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: afyaplus
 
 For your MRI bill of KES 48,000:
 
-- AfyaPlus will pay: KES 38,400
-- You will pay: KES 9,600
-- Remaining outpatient limit after this claim: KES 21,600
+- **AfyaPlus will pay:** KES 38,400
+- **You will pay:** KES 9,600
+- **Remaining outpatient limit after this claim:** KES 21,600
 
 Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: afyaplus_cover_plans.md#40688382], [source: afyaplus_cover_plans.md#bfdec5ff], [source: afyaplus_cover_plans.md#cf941b87]
 
@@ -68,17 +68,17 @@ Sources consulted: [source: afyaplus_cover_plans.md#320320c2], [source: afyaplus
 **Tools called:** calculate_medication_volume  
 **Sources retrieved:** none  
 **Invalid citations removed:** none  
-**History tokens:** 1973 | **Latency:** 3427 ms
+**History tokens:** 1967 | **Latency:** 3205 ms
 
 **Model output (still masked):**
 
 ```
-The volume for one dose of the liquid medicine is 12 mL. The maximum single dose of 600 mg was applied in this calculation. Please confirm with the prescriber or pharmacist before administering.
+The volume for one dose of the prescribed medication is **12 mL**. The maximum single dose of 600 mg was applied in this calculation. Please confirm with the prescriber or pharmacist before administering.
 ```
 
 **Final answer shown to user (de-masked):**
 
-The volume for one dose of the liquid medicine is 12 mL. The maximum single dose of 600 mg was applied in this calculation. Please confirm with the prescriber or pharmacist before administering.
+The volume for one dose of the prescribed medication is **12 mL**. The maximum single dose of 600 mg was applied in this calculation. Please confirm with the prescriber or pharmacist before administering.
 
 ## Turn 4
 
@@ -87,20 +87,20 @@ The volume for one dose of the liquid medicine is 12 mL. The maximum single dose
 **Sent to model (masked):** Who is the CEO of AfyaPlus?
 
 **PII masked:** none  
-**Tools called:** search_knowledge_vault  
-**Sources retrieved:** [source: afyaplus_cover_plans.md#320320c2], [source: claims_and_preauthorisation.md#21ea2e80], [source: data_protection_policy.md#84a74367], [source: data_protection_policy.md#acbc1f5a]  
+**Tools called:** none  
+**Sources retrieved:** none  
 **Invalid citations removed:** none  
-**History tokens:** 3049 | **Latency:** 4339 ms
+**History tokens:** 2007 | **Latency:** 1373 ms
 
 **Model output (still masked):**
 
 ```
-The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for information regarding the CEO.
+The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for such inquiries.
 ```
 
 **Final answer shown to user (de-masked):**
 
-The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for information regarding the CEO.
+The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for such inquiries.
 
 ## Turn 5
 
@@ -112,14 +112,20 @@ The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus c
 **Tools called:** none  
 **Sources retrieved:** none  
 **Invalid citations removed:** none  
-**History tokens:** 2311 | **Latency:** 1857 ms
+**History tokens:** 2052 | **Latency:** 1223 ms
 
 **Model output (still masked):**
 
 ```
-The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for assistance with your personal data.
+You provided the following contact information:
+
+- Phone number: [PHONE_1]
+- Email: [EMAIL_1]
 ```
 
 **Final answer shown to user (de-masked):**
 
-The AfyaPlus knowledge manual does not cover this. Please contact the AfyaPlus care desk for assistance with your personal data.
+You provided the following contact information:
+
+- Phone number: 0712 345 678
+- Email: wanjiku.m@example.co.ke
